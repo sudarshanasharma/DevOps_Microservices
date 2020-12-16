@@ -5,13 +5,13 @@
 # Create dockerpath
 # dockerpath=<your docker ID/path>
 #final:latest
-dockerpath="eb76e4762e14"
+dockerpath="c8cd1e3e3f8b"
 # Step 2:
 # Authenticate & tag
 ##docker tag {image ID number} yourhubusername/{name_of_your_choice]:firsttry
-sudo docker login --username "sudarshanas"
-sudo docker tag eb76e4762e14 sudarshanas/final:latest
+docker login --username "sudarshanas"
+docker tag c8cd1e3e3f8b sudarshanas/udaproj5:latest
 echo "Docker ID and Image: $dockerpath"
 # Step 3:docker push $dockerpath
 # Push image to a docker repository
-sudo docker image push sudarshanas/final:latest
+docker image push sudarshanas/udaproj5:latest

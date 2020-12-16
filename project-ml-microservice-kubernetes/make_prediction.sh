@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PORT=8001
+PORT=3001
 curl -d '{
    "CHAS":{
       "0":0
