@@ -2,23 +2,19 @@
 
 # Step 1:
 # This is your Domcker ID/path
-# dockerpath=<>
 dockerpath="sudarshanas/udaproj5"
-#docker login --username "sudarshanas"
 # Step 2
 # Run the Docker Hub container with kubernetes
-#kubectl create deployment udaproj5 --image="sudarshanas/udaproj5" --port=8001
 kubectl run udaproj5 --image=$dockerpath --port=81
-
-sleep 1m
-# Step 3:
+#Step 3:
+#Wait till the pod is up and running
+sleep 30
+# Step 4:
 # List kubernetes pods
 kubectl get pods --all-namespaces
-# Step 4:
-# Forward the container port to a host
-#kubectl expose deployment udaproj5 --type="NodePort" --port=3001 --targetport=81
+# Step 5:
+#Expose the nodeport to access the service running in the pod
 kubectl expose pod/udaproj5 --type="NodePort" --port=3001 --target-port=8001
-
-#kubectl port-forward deployment/udaproj5 3001:8001
+# Step 6:
+# Forward the container port to a host
 kubectl port-forward udaproj5 3001:81
-
