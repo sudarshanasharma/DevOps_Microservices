@@ -15,7 +15,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            pwd
+            ls -lrt
             make install
   
       # run lints!
