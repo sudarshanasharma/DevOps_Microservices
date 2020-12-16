@@ -7,7 +7,7 @@ jobs:
       
      
 
-    working_directory: ~/DevOps_Microservices/project-ml-microservice-kubernetes/.
+    working_directory: ~/DevOps_Microservices/project-ml-microservice-kubernetes
 
     steps:
       - checkout
@@ -15,7 +15,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            ls -lrt
+            cd project-ml-microservice-kubernetes
             make install
   
       # run lints!
