@@ -12,16 +12,32 @@ jobs:
     steps:
       - checkout
 
+      # Download and cache dependencies
+      - restore_cache:
+           keys:
+            - v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
       - run:
           name: install dependencies
           command: |
             cd project-ml-microservice-kubernetes
+            python3 -m venv venv
+            source venv/bin/activate
             make install
-  
+          # Install hadolint
+            wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+            chmod +x /bin/hadolint
+      - save_cache:
+          paths:
+            - ./venv
+             key: v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }}
+
       # run lints!
       - run:
           name: run lint
           command: |
-            python3 -m venv .venv
-            source .venv/bin/activate
+            cd project-ml-microservice-kubernetes
+            python3 -m venv venv
+            source venv/bin/activate
             make lint
