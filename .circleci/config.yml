@@ -30,8 +30,7 @@ jobs:
       - save_cache:
           paths:
             - ./venv
-          keys:
-           - v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }}
+          key: v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }}
 
       # run lints!
       - run:
