@@ -5,9 +5,7 @@ jobs:
       # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
       - image: circleci/python:3.7.3-stretch
       
-     
-
-    working_directory: ~/Devops_Microservices/project-ml-microservice-kubernetes/
+    working_directory: ~/Devops_Microservices/project-ml-microservice-kubernetes
 
     steps:
       - checkout
@@ -22,6 +20,8 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            python3 -m venv .venv
+            source .venv/bin/activate
             make install
       - save_cache:
           paths:
@@ -32,7 +32,6 @@ jobs:
       - run:
           name: run lint
           command: |
-            python3 -m venv .devops
-            source .devops/bin/activate
+            python3 -m venv .venv
+            source .venv/bin/activate
             make lint
-
