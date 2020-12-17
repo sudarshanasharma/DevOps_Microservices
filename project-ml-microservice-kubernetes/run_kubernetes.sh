@@ -8,7 +8,7 @@ dockerpath="sudarshanas/udaproj5"
 kubectl run udaproj5 --image=$dockerpath --port=81
 #Step 3:
 #Wait till the pod is up and running
-sleep 30
+sleep 1m
 # Step 4:
 # List kubernetes pods
 kubectl get pods --all-namespaces
