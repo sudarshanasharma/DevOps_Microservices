@@ -14,7 +14,7 @@ RUN python3 -m pip3 install --no-cache-dir --upgrade pip &&\
     pip3 install --no-cache-dir --trusted-host pypi.python.org -r requirements.txt
 
 # Expose port 80
-EXPOSE 8001
+EXPOSE 80
 
 # Run app.py at container launch
 CMD ["python", "app.py"]
