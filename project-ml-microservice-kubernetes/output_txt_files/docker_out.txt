@@ -1,11 +1,111 @@
-[2020-12-14 00:43:49,943] INFO in app: JSON payload: 
+(venv) ubuntu:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ ./run_docker.sh 
+Sending build context to Docker daemon  6.464MB
+Step 1/6 : FROM python:3.7.3-stretch
+ ---> 34a518642c76
+Step 2/6 : WORKDIR /app
+ ---> Running in 9c4d3d963c8a
+Removing intermediate container 9c4d3d963c8a
+ ---> a34c2926921a
+Step 3/6 : COPY . app.py /app/
+ ---> 8e3aa0fc0816
+Step 4/6 : RUN python3 -m pip install --no-cache-dir --upgrade pip &&    pip install --no-cache-dir --trusted-host pypi.python.org -r requirements.txt
+ ---> Running in eca51278ddbb
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/54/eb/4a3642e971f404d69d4f6fa3885559d67562801b99d7592487f1ecc4e017/pip-20.3.3-py2.py3-none-any.whl (1.5MB)
+Installing collected packages: pip
+  Found existing installation: pip 19.1.1
+    Uninstalling pip-19.1.1:
+      Successfully uninstalled pip-19.1.1
+Successfully installed pip-20.3.3
+Collecting Click==7.0
+  Downloading Click-7.0-py2.py3-none-any.whl (81 kB)
+Collecting Flask==1.0.2
+  Downloading Flask-1.0.2-py2.py3-none-any.whl (91 kB)
+Collecting itsdangerous==1.1.0
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Jinja2==2.10.3
+  Downloading Jinja2-2.10.3-py2.py3-none-any.whl (125 kB)
+Collecting MarkupSafe==1.1.1
+  Downloading MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl (27 kB)
+Collecting numpy==1.17.2
+  Downloading numpy-1.17.2-cp37-cp37m-manylinux1_x86_64.whl (20.3 MB)
+Collecting pandas==0.24.2
+  Downloading pandas-0.24.2-cp37-cp37m-manylinux1_x86_64.whl (10.1 MB)
+Collecting python-dateutil==2.8.0
+  Downloading python_dateutil-2.8.0-py2.py3-none-any.whl (226 kB)
+Collecting pytz==2019.3
+  Downloading pytz-2019.3-py2.py3-none-any.whl (509 kB)
+Collecting scikit-learn==0.20.3
+  Downloading scikit_learn-0.20.3-cp37-cp37m-manylinux1_x86_64.whl (5.4 MB)
+Collecting scipy==1.3.1
+  Downloading scipy-1.3.1-cp37-cp37m-manylinux1_x86_64.whl (25.2 MB)
+Collecting six==1.12.0
+  Downloading six-1.12.0-py2.py3-none-any.whl (10 kB)
+Collecting Werkzeug==0.16.0
+  Downloading Werkzeug-0.16.0-py2.py3-none-any.whl (327 kB)
+Collecting pylint
+  Downloading pylint-2.6.0-py3-none-any.whl (325 kB)
+Collecting astroid<=2.5,>=2.4.0
+  Downloading astroid-2.4.2-py3-none-any.whl (213 kB)
+Collecting lazy-object-proxy==1.4.*
+  Downloading lazy_object_proxy-1.4.3-cp37-cp37m-manylinux1_x86_64.whl (56 kB)
+Collecting isort<6,>=4.2.5
+  Downloading isort-5.6.4-py3-none-any.whl (98 kB)
+Collecting mccabe<0.7,>=0.6
+  Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Collecting toml>=0.7.1
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting typed-ast<1.5,>=1.4.0
+  Downloading typed_ast-1.4.1-cp37-cp37m-manylinux1_x86_64.whl (737 kB)
+Collecting wrapt~=1.11
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+Building wheels for collected packages: wrapt
+  Building wheel for wrapt (setup.py): started
+  Building wheel for wrapt (setup.py): finished with status 'done'
+  Created wheel for wrapt: filename=wrapt-1.12.1-cp37-cp37m-linux_x86_64.whl size=71600 sha256=a137c1e6633da8d31fb4bac185378b217661dfce53a0e42ecad0c6b78c08b92c
+  Stored in directory: /tmp/pip-ephem-wheel-cache-28jqt1le/wheels/62/76/4c/aa25851149f3f6d9785f6c869387ad82b3fd37582fa8147ac6
+Successfully built wrapt
+Installing collected packages: wrapt, typed-ast, six, numpy, MarkupSafe, lazy-object-proxy, Werkzeug, toml, scipy, pytz, python-dateutil, mccabe, Jinja2, itsdangerous, isort, Click, astroid, scikit-learn, pylint, pandas, Flask
+Successfully installed Click-7.0 Flask-1.0.2 Jinja2-2.10.3 MarkupSafe-1.1.1 Werkzeug-0.16.0 astroid-2.4.2 isort-5.6.4 itsdangerous-1.1.0 lazy-object-proxy-1.4.3 mccabe-0.6.1 numpy-1.17.2 pandas-0.24.2 pylint-2.6.0 python-dateutil-2.8.0 pytz-2019.3 scikit-learn-0.20.3 scipy-1.3.1 six-1.12.0 toml-0.10.2 typed-ast-1.4.1 wrapt-1.12.1
+Removing intermediate container eca51278ddbb
+ ---> 4d6b901f6a9c
+Step 5/6 : EXPOSE 81
+ ---> Running in e336c89df66f
+Removing intermediate container e336c89df66f
+ ---> 5db72667dad1
+Step 6/6 : CMD ["python", "app.py"]
+ ---> Running in ee90bfd39d0e
+Removing intermediate container ee90bfd39d0e
+ ---> 2fdefbb21d52
+Successfully built 2fdefbb21d52
+Successfully tagged sudarshanas/udaproj5:latest
+REPOSITORY             TAG             IMAGE ID       CREATED                  SIZE
+sudarshanas/udaproj5   latest          2fdefbb21d52   Less than a second ago   1.19GB
+sudarshanas/udaproj5   <none>          052d7c07f668   17 hours ago             1.19GB
+lambci/lambda          python3.8       e6cf0b46b26b   3 weeks ago              522MB
+lambci/lambda          nodejs12.x      55dbbd9e27c9   3 weeks ago              388MB
+lambci/lambda          nodejs10.x      b4e0a7118f05   3 weeks ago              383MB
+lambci/lambda          python3.7       e1ad51bc7730   3 weeks ago              943MB
+lambci/lambda          python3.6       32f70d79634b   3 weeks ago              891MB
+lambci/lambda          python2.7       c1be52177e41   3 weeks ago              761MB
+lambci/lambda          nodejs8.10      b77afdbde40f   3 weeks ago              813MB
+python                 3.7.3-stretch   34a518642c76   18 months ago            929MB
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 192-038-906
+[2020-12-17 20:32:46,919] INFO in app: JSON payload: 
 {'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
-[2020-12-14 00:43:50,020] INFO in app: Inference payload DataFrame: 
+[2020-12-17 20:32:46,933] INFO in app: Inference payload DataFrame: 
    CHAS     RM    TAX  PTRATIO      B  LSTAT
 0     0  6.575  296.0     15.3  396.9   4.98
-[2020-12-14 00:43:50,081] INFO in app: Scaling Payload: 
+[2020-12-17 20:32:46,943] INFO in app: Scaling Payload: 
    CHAS     RM    TAX  PTRATIO      B  LSTAT
 0     0  6.575  296.0     15.3  396.9   4.98
-[2020-12-14 00:43:50,102] INFO in app: Output Prediction: [20.35373177134412]
-172.17.0.1 - - [14/Dec/2020 00:43:50] "POST /predict HTTP/1.1" 200 -
-
+[2020-12-17 20:32:46,947] INFO in app: Output Prediction: [20.35373177134412]
+172.17.0.1 - - [17/Dec/2020 20:32:46] "POST /predict HTTP/1.1" 200 -

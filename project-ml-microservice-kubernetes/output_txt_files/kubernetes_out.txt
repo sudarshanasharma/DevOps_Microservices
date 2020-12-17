@@ -1,15 +1,16 @@
-(.devops) ubuntu:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ ./run_kubernetes.sh 
+(venv) ubuntu:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ ./run_kubernetes.sh 
 pod/udaproj5 created
 NAMESPACE     NAME                               READY   STATUS    RESTARTS   AGE
 default       udaproj5                           1/1     Running   0          60s
-kube-system   coredns-f9fd979d6-dr8t7            1/1     Running   0          2m54s
-kube-system   etcd-minikube                      1/1     Running   0          2m55s
-kube-system   kube-apiserver-minikube            1/1     Running   0          2m55s
-kube-system   kube-controller-manager-minikube   1/1     Running   0          2m55s
-kube-system   kube-proxy-7bxlh                   1/1     Running   0          2m54s
-kube-system   kube-scheduler-minikube            1/1     Running   0          2m55s
-kube-system   storage-provisioner                1/1     Running   0          2m57s
+kube-system   coredns-f9fd979d6-s9rk4            1/1     Running   0          72s
+kube-system   etcd-minikube                      1/1     Running   0          74s
+kube-system   kube-apiserver-minikube            1/1     Running   0          74s
+kube-system   kube-controller-manager-minikube   0/1     Running   0          74s
+kube-system   kube-proxy-dqc4d                   1/1     Running   0          72s
+kube-system   kube-scheduler-minikube            0/1     Running   0          74s
+kube-system   storage-provisioner                1/1     Running   0          77s
 service/udaproj5 exposed
-Forwarding from 127.0.0.1:3001 -> 81
-Forwarding from [::1]:3001 -> 81
+Forwarding from 127.0.0.1:3001 -> 8000
+Forwarding from [::1]:3001 -> 8000
+Handling connection for 3001
 Handling connection for 3001

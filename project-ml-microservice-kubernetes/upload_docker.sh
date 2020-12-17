@@ -4,7 +4,7 @@
 # Step 1:
 # Create dockerpath
 dockerpath="sudarshanas/udaproj5:latest"
-imageid="052d7c07f668"
+imageid="2fdefbb21d52"
 username="sudarshanas"
 # Step 2:
 # Authenticate & tag
