@@ -1,4 +1,4 @@
-![CircleCI](https://img.shields.io/circleci/build/github/sudarshanasharma/DevOps_Microservices/circleci-project-setup)(https://app.circleci.com/pipelines/github/sudarshanasharma/DevOps_Microservices)
+![CircleCI](https://img.shields.io/circleci/build/github/sudarshanasharma/DevOps_Microservices/circleci-project-setup(https://app.circleci.com/pipelines/github/sudarshanasharma/DevOps_Microservices))
 
 ## Project Overview
 
