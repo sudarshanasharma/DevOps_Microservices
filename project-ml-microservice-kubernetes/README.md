@@ -1,7 +1,4 @@
-[![CircleCI](https://circleci.com/gh/sudarshanasharma/
-DevOps_Microservices.shield?style=shield)](https://app.circleci.com/pipelines/github/sudarshanasharma/DevOps_Microservices)
-
-![AppVeyor](https://img.shields.io/appveyor/build/sudarshanasharama/Devops_Microservices)
+![CircleCI](https://img.shields.io/circleci/build/github/sudarshanasharma/DevOps_Microservices/circleci-project-setup)
 
 ## Project Overview
 
