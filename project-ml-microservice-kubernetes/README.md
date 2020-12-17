@@ -1,5 +1,5 @@
 [![CircleCI](https://circleci.com/gh/sudarshanasharma/
-DevOps_Microservices.svg?style=svg)](https://app.circleci.com/pipelines/github/sudarshanasharma/DevOps_Microservices)
+DevOps_Microservices.svg?style=shield)](https://app.circleci.com/pipelines/github/sudarshanasharma/DevOps_Microservices)
 
 ## Project Overview
 
