@@ -14,7 +14,7 @@ sleep 1m
 kubectl get pods --all-namespaces
 # Step 5:
 #Expose the nodeport to access the service running in the pod
-kubectl expose pod/udaproj5 --type="NodePort" --port=3001 --target-port=80
+kubectl expose pod/udaproj5 --type="NodePort" --port=3001 --target-port=81
 # Step 6:
 # Forward the container port to a host
 kubectl port-forward udaproj5 3001:8000
