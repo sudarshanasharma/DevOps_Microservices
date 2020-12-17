@@ -11,4 +11,4 @@ docker image ls
 # Step 3: 
 # Run flask app
 #sudo docker run -p 8001:81 -it final bash
-docker run -p 80:8000 sudarshanas/udaproj5
+docker run -p 81:8000 sudarshanas/udaproj5
