@@ -1,6 +1,8 @@
 [![CircleCI](https://circleci.com/gh/sudarshanasharma/
 DevOps_Microservices.shield?style=shield)](https://app.circleci.com/pipelines/github/sudarshanasharma/DevOps_Microservices)
 
+![AppVeyor](https://img.shields.io/appveyor/build/sudarshanasharama/Devops_Microservices)
+
 ## Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
