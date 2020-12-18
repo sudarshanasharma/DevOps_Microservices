@@ -48,3 +48,4 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * project-ml-microservices-kubernetes/upload_docker.sh : This script is used to load a docker image to the Dockerhub repository, of a provided user.
 * project-ml-microservices-kubernetes/run-kubernetes.sh : This script is used to get the Docker image of the app from Dockerhub and run it as a microservice in a kubernetes cluster with 1 pod
 
+![Untitled presentation](Untitled presentation.jpg)
