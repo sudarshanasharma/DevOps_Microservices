@@ -2,43 +2,16 @@
 
 ## Project Overview
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
-
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
-
-### Project Tasks
-
-Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
-* Test your project code using linting
+We are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. In this project ,our goal is to operationalize a Python flask app—in a provided file, `app.py`—using kubernetes.
+The steps are as follows;
+* Test project code using linting
 * Complete a Dockerfile to containerize this application
-* Deploy your containerized application using Docker and make a prediction
+* Deploy containerized application using Docker and make a prediction
 * Improve the log statements in the source code for this application
 * Configure Kubernetes and create a Kubernetes cluster
 * Deploy a container using Kubernetes and make a prediction
-* Upload a complete Github repo with CircleCI to indicate that your code has been tested
+* Upload a complete Github repo with CircleCI to indicate that the code has been tested
 
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
-
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
-
-
-## Setup the Environment
-
-* Create a virtualenv and activate it
-* Run `make install` to install the necessary dependencies
-
-### Running `app.py`
-
-1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
-
-### Kubernetes Steps
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
 
 ### Contents of repository
 * .circleci/config.yml : This is the configuration file for building the source-code in CircleCi
@@ -55,7 +28,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 For the sake of clarity, I have assigned 3 different port numbers to the sockets opened by the app.py, the docker container and the kubernetes pod, as shown in the above diagram. Also, in order to run app.py locally,I had to change the port number from 80 to 8000,as: AWS cloud9 EC2 machine starts up with port 80(HTTP) unavailable to bind with app.py; and also as 80 is a privileged port (<1024),permission was denied to non-root user.
 
-I have followed the instructions in # 4.Create the Project Environment, to clone my repository and set up the project environment.
+I have followed the instructions in 4.Create the Project Environment, to clone my repository and set up the project environment.
 
 ### Running `app.py`
 1. Standalone:
