@@ -15,6 +15,8 @@ The steps are as follows;
 
 ### Contents of repository
 * .circleci/config.yml : This is the configuration file for building the source-code in CircleCi
+* project-ml-microservice-kubernetes/requirements.txt : This file has the list of all the dependencies of the flask app
+
 * project-ml-microservice-kubernetes/Makefile : This file is needed to build the app.py file and install its dependencies 
 * project-ml-microservice-kubernetes/Dockerfile : This file provides a sequence of directives to containerize an app in the Docker format
 * project-ml-microservice-kubernetes/run_docker.sh : This script has the sequence of docker commands to build the app in Docker format and run it on the specified ports.
@@ -33,21 +35,28 @@ I have followed the instructions in 4.Create the Project Environment, to clone m
 ### Running `app.py`
 1. Standalone:
 cd DevOps_Microservices/project-ml-microservice-kubernetes/
+
 python3 -m venv venv
 source venv/bin/activate
 make all
+
 In another terminal change the PORT to 8000 in Make_prediction.sh,and execute the script.
-2. Run in Docker:
+2. Run in Docker: Please update the script run_docker.sh,and upload_docker.sh,with your particulars.
 cd DevOps_Microservices/project-ml-microservice-kubernetes/
+
 python3 -m venv venv
 source venv/bin/activate
 ./run_docker.sh
-In another terminal change the PORT to 81 in Make_prediction.sh,and execute the script.
-3. Run in Kubernetes:  
+
+In another terminal change the PORT to 81 in Make_prediction.sh,and execute the script. 
+The new docker image can be uploaded by running ./upload_docker.sh, after substituting the image id.
+3. Run in Kubernetes:Please update the script run_kubernetes.sh, with your particulars.
 cd DevOps_Microservices/project-ml-microservice-kubernetes/
+
 python3 -m venv venv
 source venv/bin/activate
 ./run_kubernetes.sh
+
 In another terminal change the PORT to 3001 in Make_prediction.sh,and execute the script.
 
 
