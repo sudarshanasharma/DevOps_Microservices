@@ -21,7 +21,6 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 **The final implementation of the project will showcase your abilities to operationalize production microservices.**
 
----
 
 ## Setup the Environment
 
@@ -40,3 +39,12 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+### Contents of repository
+* .circleci/config.yml : This is the configuration file for building the source-code in CircleCi
+* project-ml-microservice-kubernetes/Makefile : This file is needed to build the app.py file and install its dependencies 
+* project-ml-microservice-kubernetes/Dockerfile : This file provides a sequence of directives to containerize an app in the Docker format
+* project-ml-microservice-kubernetes/run_docker.sh : This script has the sequence of docker commands to build the app in Docker format and run it on the specified ports.
+* project-ml-microservices-kubernetes/upload_docker.sh : This script is used to load a docker image to the Dockerhub repository, of a provided user.
+* project-ml-microservices-kubernetes/run-kubernetes.sh : This script is used to get the Docker image of the app from Dockerhub and run it as a microservice in a kubernetes cluster with 1 pod
+
