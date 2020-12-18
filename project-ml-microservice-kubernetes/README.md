@@ -46,7 +46,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * project-ml-microservice-kubernetes/Dockerfile : This file provides a sequence of directives to containerize an app in the Docker format
 * project-ml-microservice-kubernetes/run_docker.sh : This script has the sequence of docker commands to build the app in Docker format and run it on the specified ports.
 * project-ml-microservices-kubernetes/upload_docker.sh : This script is used to load a docker image to the Dockerhub repository, of a provided user.
-* project-ml-microservices-kubernetes/run-kubernetes.sh : This script is used to get the Docker image of the app from Dockerhub and run it as a microservice in a kubernetes cluster with 1 pod
+* project-ml-microservices-kubernetes/run-kubernetes.sh : This script is used to get the Docker image of the app from Dockerhub and run it as a microservice in a kubernetes cluster with 1 pod.
 * project-ml-microservices-kubernetes/Make_prediction.sh : This script is used to query the app.
 
 
@@ -62,8 +62,21 @@ I have followed the instructions in # 4.Create the Project Environment, to clone
 cd DevOps_Microservices/project-ml-microservice-kubernetes/
 python3 -m venv venv
 source venv/bin/activate
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+make all
+In another terminal change the PORT to 8000 in Make_prediction.sh,and execute the script.
+2. Run in Docker:
+cd DevOps_Microservices/project-ml-microservice-kubernetes/
+python3 -m venv venv
+source venv/bin/activate
+./run_docker.sh
+In another terminal change the PORT to 81 in Make_prediction.sh,and execute the script.
+3. Run in Kubernetes:  
+cd DevOps_Microservices/project-ml-microservice-kubernetes/
+python3 -m venv venv
+source venv/bin/activate
+./run_kubernetes.sh
+In another terminal change the PORT to 3001 in Make_prediction.sh,and execute the script.
+
 
 
 
